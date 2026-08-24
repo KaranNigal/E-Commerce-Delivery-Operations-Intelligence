@@ -33,3 +33,6 @@ Thumbs.db
 # Local data artifacts
 data/raw/
 data/processed/
+
+# Generated synthetic datasets
+data/synthetic/*.csv
