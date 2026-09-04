@@ -2,7 +2,7 @@
 # PYTHON
 # ============================================================
 
-# Virtual environment
+# Virtual environments
 .venv/
 venv/
 env/
@@ -12,6 +12,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+
 # ============================================================
 # ENVIRONMENT VARIABLES / SECRETS
 # ============================================================
@@ -20,11 +21,13 @@ __pycache__/
 .env.*
 !.env.example
 
+
 # ============================================================
 # JUPYTER
 # ============================================================
 
 .ipynb_checkpoints/
+
 
 # ============================================================
 # TESTING / COVERAGE
@@ -34,12 +37,14 @@ __pycache__/
 .coverage
 htmlcov/
 
+
 # ============================================================
 # IDE
 # ============================================================
 
 .vscode/
 .idea/
+
 
 # ============================================================
 # OS FILES
@@ -48,37 +53,42 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
+
 # ============================================================
 # LOGS
 # ============================================================
 
 *.log
 
+
 # ============================================================
 # DATA
 # ============================================================
 
-# Ignore all data by default
+# Ignore all datasets by default
 data/*
 
-# Keep directory structure and required dashboard dataset
-!data/synthetic/
-!data/synthetic/amazon_delivery_synthetic.csv
+# Keep lightweight dashboard deployment dataset
+!data/dashboard/
+!data/dashboard/dashboard_orders.csv
 
-# Explicitly ignore unnecessary local/source datasets
+# Explicitly ignore local/source/generated datasets
 data/raw/
 data/processed/
 data/final/
+data/synthetic/
+
 
 # ============================================================
 # MODELS
 # ============================================================
 
-# Ignore model artifacts by default
+# Ignore all model artifacts by default
 models/*
 
-# Keep required dashboard forecast file
+# Keep dashboard forecast results
 !models/demand_forecast_results.csv
+
 
 # ============================================================
 # REPORTS
@@ -87,11 +97,9 @@ models/*
 # Ignore generated figures
 reports/figures/
 
-# Ignore report tables by default
+# Ignore all report tables by default
 reports/tables/*
 
-# Keep only files required by the Streamlit dashboard
+# Keep dashboard-required tables
 !reports/tables/capacity_plan.csv
 !reports/tables/operational_intelligence_dashboard_data.csv
-# Intermediate synthetic generation file
-data/synthetic/synthetic_daily_operations.csv

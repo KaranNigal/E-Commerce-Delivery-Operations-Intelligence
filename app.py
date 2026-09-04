@@ -24,8 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent
 ORDERS_FILE = (
     BASE_DIR
     / "data"
-    / "synthetic"
-    / "amazon_delivery_synthetic.csv"
+    / "dashboard"
+    / "dashboard_orders.csv"
 )
 
 FORECAST_FILE = (
