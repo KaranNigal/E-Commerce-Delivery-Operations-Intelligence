@@ -47,3 +47,6 @@ data/synthetic/*.csv
 # Generated project artifacts
 models/
 reports/
+
+# Generated/local datasets
+data/
