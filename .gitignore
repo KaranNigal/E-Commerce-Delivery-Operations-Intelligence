@@ -1,52 +1,97 @@
-# Python virtual environment
+# ============================================================
+# PYTHON
+# ============================================================
+
+# Virtual environment
 .venv/
+venv/
+env/
 
 # Python cache
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Environment variables / secrets
+# ============================================================
+# ENVIRONMENT VARIABLES / SECRETS
+# ============================================================
+
 .env
 .env.*
 !.env.example
 
-# Jupyter
+# ============================================================
+# JUPYTER
+# ============================================================
+
 .ipynb_checkpoints/
 
-# Test / coverage
+# ============================================================
+# TESTING / COVERAGE
+# ============================================================
+
 .pytest_cache/
 .coverage
 htmlcov/
 
+# ============================================================
 # IDE
+# ============================================================
+
 .vscode/
 .idea/
 
-# OS files
+# ============================================================
+# OS FILES
+# ============================================================
+
 .DS_Store
 Thumbs.db
 
-# Logs
+# ============================================================
+# LOGS
+# ============================================================
+
 *.log
 
-# Local data artifacts
+# ============================================================
+# DATA
+# ============================================================
+
+# Ignore all data by default
+data/*
+
+# Keep directory structure and required dashboard dataset
+!data/synthetic/
+!data/synthetic/amazon_delivery_synthetic.csv
+
+# Explicitly ignore unnecessary local/source datasets
 data/raw/
 data/processed/
+data/final/
 
-# Generated synthetic datasets
-data/synthetic/*.csv
+# ============================================================
+# MODELS
+# ============================================================
 
-# Local data artifacts
-data/raw/
-data/processed/
+# Ignore model artifacts by default
+models/*
 
-# Generated synthetic datasets
-data/synthetic/*.csv
+# Keep required dashboard forecast file
+!models/demand_forecast_results.csv
 
-# Generated project artifacts
-models/
-reports/
+# ============================================================
+# REPORTS
+# ============================================================
 
-# Generated/local datasets
-data/
+# Ignore generated figures
+reports/figures/
+
+# Ignore report tables by default
+reports/tables/*
+
+# Keep only files required by the Streamlit dashboard
+!reports/tables/capacity_plan.csv
+!reports/tables/operational_intelligence_dashboard_data.csv
+# Intermediate synthetic generation file
+data/synthetic/synthetic_daily_operations.csv
