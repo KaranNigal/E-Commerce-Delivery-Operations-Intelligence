@@ -36,3 +36,14 @@ data/processed/
 
 # Generated synthetic datasets
 data/synthetic/*.csv
+
+# Local data artifacts
+data/raw/
+data/processed/
+
+# Generated synthetic datasets
+data/synthetic/*.csv
+
+# Generated project artifacts
+models/
+reports/
